@@ -96,7 +96,7 @@ const Services = () => {
             <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4 fade-in">
               Services
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1 heading-glow">
               Strategic expertise for{" "}
               <span className="text-gold-gradient">transformative growth</span>
             </h1>

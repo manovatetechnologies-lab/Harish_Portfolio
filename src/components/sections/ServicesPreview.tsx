@@ -38,7 +38,7 @@ const ServicesPreview = () => {
           <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4">
             Services
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground heading-glow">
             How I can help you succeed
           </h2>
         </div>

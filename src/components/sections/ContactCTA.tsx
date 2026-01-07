@@ -8,7 +8,7 @@ const ContactCTA = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-3xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 heading-glow">
             Ready to elevate your{" "}
             <span className="text-gold-gradient">strategy</span>?
           </h2>

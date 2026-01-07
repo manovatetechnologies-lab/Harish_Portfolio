@@ -50,7 +50,7 @@ const Contact = () => {
             <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4 fade-in">
               Contact
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1 heading-glow">
               Let's start a{" "}
               <span className="text-gold-gradient">conversation</span>
             </h1>

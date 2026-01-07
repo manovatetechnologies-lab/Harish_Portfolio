@@ -14,18 +14,18 @@ const StarfieldBackground = () => {
     const generateStars = (count: number, layer: 1 | 2 | 3): Star[] => {
       return Array.from({ length: count }, (_, i) => ({
         id: layer * 100 + i,
-        x: Math.random() * 120, // Extra width for seamless loop
-        y: Math.random() * 120,
-        size: layer === 1 ? 1 + Math.random() * 1.5 : layer === 2 ? 0.8 + Math.random() : 0.5 + Math.random() * 0.5,
-        opacity: layer === 1 ? 0.4 + Math.random() * 0.3 : layer === 2 ? 0.25 + Math.random() * 0.2 : 0.15 + Math.random() * 0.15,
+        x: Math.random() * 150, // Extra width for seamless loop
+        y: Math.random() * 150,
+        size: layer === 1 ? 1.5 + Math.random() * 2 : layer === 2 ? 1.2 + Math.random() * 1.5 : 0.8 + Math.random() * 1,
+        opacity: layer === 1 ? 0.6 + Math.random() * 0.3 : layer === 2 ? 0.45 + Math.random() * 0.25 : 0.3 + Math.random() * 0.2,
         layer,
       }));
     };
 
     return [
-      ...generateStars(30, 1), // Foreground - larger, brighter
-      ...generateStars(50, 2), // Midground
-      ...generateStars(70, 3), // Background - smaller, dimmer
+      ...generateStars(40, 1), // Foreground - larger, brighter
+      ...generateStars(60, 2), // Midground
+      ...generateStars(80, 3), // Background - smaller, dimmer
     ];
   }, []);
 
