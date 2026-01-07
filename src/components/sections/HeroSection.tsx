@@ -23,7 +23,7 @@ const HeroSection = () => {
           </p>
 
           {/* Name */}
-          <h1 className="fade-in fade-in-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-6">
+          <h1 className="fade-in fade-in-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-6 heading-glow">
             <span className="text-gold-gradient">Alexander</span>
             <br />
             <span className="text-foreground">Mitchell</span>

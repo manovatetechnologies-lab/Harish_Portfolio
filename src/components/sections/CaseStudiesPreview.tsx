@@ -30,7 +30,7 @@ const CaseStudiesPreview = () => {
           <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4">
             Case Studies
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground heading-glow">
             Featured work
           </h2>
         </div>

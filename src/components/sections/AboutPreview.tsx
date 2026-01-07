@@ -13,7 +13,7 @@ const AboutPreview = () => {
           </p>
 
           {/* Heading */}
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-8">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-8 heading-glow">
             Two decades of turning vision into measurable impact
           </h2>
 

@@ -38,7 +38,7 @@ const InsightsPreview = () => {
           <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4">
             Insights
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground heading-glow">
             Thoughts on leadership
           </h2>
         </div>
