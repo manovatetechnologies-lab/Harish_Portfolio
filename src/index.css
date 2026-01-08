@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,8 +7,6 @@
 /* ============================================
    LUXURY BLACK & GOLD DESIGN SYSTEM
    ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
@@ -20,7 +20,7 @@
     --popover: 0 0% 6%;
     --popover-foreground: 45 10% 95%;
 
-    /* Gold accent - Metallic warm gold */
+    /* Primary Gold (signature) */
     --primary: 45 70% 47%;
     --primary-foreground: 0 0% 4%;
 
@@ -31,7 +31,7 @@
     --muted: 0 0% 12%;
     --muted-foreground: 45 10% 55%;
 
-    /* Gold accent variations */
+    /* Accent gold */
     --accent: 45 60% 35%;
     --accent-foreground: 45 10% 95%;
 
@@ -44,12 +44,32 @@
 
     --radius: 0.5rem;
 
-    /* Custom gold shades */
-    --gold: 45 70% 47%;
-    --gold-soft: 45 50% 55%;
-    --gold-muted: 45 30% 35%;
-    --gold-glow: 45 80% 60%;
-    
+    /* =================================================
+       EXTENDED GOLD PALETTE (NEW – multi-shade system)
+       ================================================= */
+
+    /* Core golds */
+    --gold: 45 70% 47%;          /* primary brand gold */
+    --gold-soft: 45 55% 60%;     /* text gradients */
+    --gold-muted: 45 30% 35%;    /* subtle accents */
+    --gold-glow: 45 80% 60%;     /* glow effects */
+
+    /* Light golds (backgrounds / highlights) */
+    --gold-light-1: 45 65% 75%;
+    --gold-light-2: 45 60% 68%;
+
+    /* Deep golds (borders / emphasis) */
+    --gold-deep-1: 45 65% 40%;
+    --gold-deep-2: 45 60% 32%;
+
+    /* Antique / bronze gold (luxury sections) */
+    --gold-antique: 42 45% 28%;
+
+    /* Semantic usage golds */
+    --gold-hover: 45 75% 52%;
+    --gold-border-strong: 45 70% 38%;
+    --gold-bg-subtle: 45 70% 47% / 0.08;
+
     /* Starfield */
     --star-color: 45 70% 60%;
 
@@ -111,28 +131,31 @@
 @layer components {
   /* Gold glow effect */
   .gold-glow {
-    box-shadow: 0 0 20px hsl(var(--gold) / 0.3),
-                0 0 40px hsl(var(--gold) / 0.1);
+    box-shadow:
+      0 0 20px hsl(var(--gold-glow) / 0.35),
+      0 0 45px hsl(var(--gold) / 0.15);
   }
 
   .gold-glow-subtle {
-    box-shadow: 0 0 15px hsl(var(--gold) / 0.15),
-                0 0 30px hsl(var(--gold) / 0.05);
+    box-shadow:
+      0 0 12px hsl(var(--gold) / 0.18),
+      0 0 24px hsl(var(--gold) / 0.08);
   }
 
   /* Heading glow for main topics */
   .heading-glow {
-    text-shadow: 0 0 40px hsl(var(--gold) / 0.15),
-                 0 0 80px hsl(var(--gold) / 0.08);
+    text-shadow:
+      0 0 40px hsl(var(--gold-soft) / 0.18),
+      0 0 90px hsl(var(--gold) / 0.1);
   }
 
   /* Gold text gradient */
   .text-gold-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--gold-soft)) 0%,
+      hsl(var(--gold-light-1)) 0%,
       hsl(var(--gold)) 50%,
-      hsl(var(--gold-soft)) 100%
+      hsl(var(--gold-deep-1)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -142,8 +165,14 @@
   /* Gold border gradient */
   .border-gold-gradient {
     border: 1px solid transparent;
-    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--gold) / 0.5), hsl(var(--gold) / 0.1), hsl(var(--gold) / 0.5)) border-box;
+    background:
+      linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+      linear-gradient(
+        135deg,
+        hsl(var(--gold-light-2)),
+        hsl(var(--gold)),
+        hsl(var(--gold-deep-2))
+      ) border-box;
   }
 
   /* Card with gold accent */
@@ -153,8 +182,8 @@
   }
 
   .card-gold:hover {
-    border-color: hsl(var(--gold) / 0.4);
-    box-shadow: 0 0 30px hsl(var(--gold) / 0.1);
+    border-color: hsl(var(--gold-hover) / 0.6);
+    box-shadow: 0 0 35px hsl(var(--gold) / 0.12);
   }
 
   /* Link underline animation */
@@ -208,52 +237,30 @@
 }
 
 @layer utilities {
-  /* Starfield animation keyframes - more movement */
+  /* Starfield animation keyframes */
   @keyframes drift {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-60px, -100px);
-    }
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-60px, -100px); }
   }
 
   @keyframes drift-slow {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-45px, -80px);
-    }
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-45px, -80px); }
   }
 
   @keyframes drift-slower {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-30px, -60px);
-    }
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-30px, -60px); }
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .animate-drift {

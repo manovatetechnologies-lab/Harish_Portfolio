@@ -1,47 +1,95 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const AboutPreview = () => {
   return (
     <section id="about-preview" className="section-spacing relative">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Label */}
-          <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4">
-            About
-          </p>
+          {/* Card */}
+          <div className="rounded-3xl border border-white/10 bg-black/40 backdrop-blur px-8 py-10 md:px-12 md:py-12">
 
-          {/* Heading */}
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-8 heading-glow">
-            Two decades of turning vision into measurable impact
-          </h2>
+            {/* Main Content */}
+            <div className="space-y-8 mb-10">
+              <p className="font-display text-xl md:text-2xl lg:text-3xl font-light text-foreground leading-relaxed">
+                I’m Harish N, the Founder and Director of SoftServe Hub, where we
+                blend AI, automation, and software delivery to accelerate
+                operational growth for teams in 15+ countries.
+              </p>
 
-          {/* Description */}
-          <div className="space-y-6 mb-10">
-            <p className="text-muted-foreground text-lg font-body font-light leading-relaxed">
-              With over 20 years of experience across Fortune 500 companies and
-              high-growth startups, I specialize in bridging the gap between
-              strategic vision and operational excellence. My approach combines
-              deep analytical rigor with human-centered design thinking.
+              <p className="text-muted-foreground text-lg font-body font-light leading-relaxed">
+                My practice is rooted in clarity and measurable execution -
+                turning complex business goals into intelligent systems that
+                are easy to adopt, govern, and scale.
+              </p>
+            </div>
+
+            {/* Location Line */}
+            <p className="text-gold/80 text-xs font-body tracking-[0.3em] uppercase mb-10">
+              Based in Chennai · Working Globally · 15+ Countries Served
             </p>
-            <p className="text-muted-foreground text-lg font-body font-light leading-relaxed">
-              I've had the privilege of advising C-suite executives, leading
-              cross-functional teams, and driving transformational initiatives
-              that have generated billions in enterprise value.
-            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              {/* Personal Email */}
+              <Button
+                className="
+                  bg-gold text-black
+                  border border-gold
+                  transition-all duration-300
+                  hover:bg-black hover:text-gold
+                  flex items-center gap-2
+                "
+              >
+                <Mail size={16} />
+                Personal Email
+              </Button>
+
+              {/* Business Inquiries */}
+              <Button
+                className="
+                  bg-black text-gold
+                  border border-gold
+                  transition-all duration-300
+                  hover:bg-gold hover:text-black
+                  flex items-center gap-2
+                "
+              >
+                <Mail size={16} />
+                Business Inquiries
+              </Button>
+
+              {/* LinkedIn */}
+              <Button
+                className="
+                  bg-black text-foreground
+                  border border-white/20
+                  transition-all duration-300
+                  hover:bg-gold hover:text-black hover:border-gold
+                  flex items-center gap-2
+                "
+              >
+                <Linkedin size={16} />
+                LinkedIn Profile
+              </Button>
+
+              {/* GitHub */}
+              <Button
+                className="
+                  bg-black text-foreground
+                  border border-white/20
+                  transition-all duration-300
+                  hover:bg-gold hover:text-black hover:border-gold
+                  flex items-center gap-2
+                "
+              >
+                <Github size={16} />
+                GitHub Showcase
+              </Button>
+            </div>
+
           </div>
-
-          {/* CTA */}
-          <Button variant="goldGhost" size="lg" asChild className="group">
-            <Link to="/experience" className="flex items-center gap-2">
-              View Full Experience
-              <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

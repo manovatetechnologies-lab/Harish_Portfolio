@@ -11,6 +11,9 @@ import Insights from "./pages/Insights";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
+import Projects from "./pages/Projects";
+import CaseStudyPage from "./pages/CaseStudyPage";
 
 const queryClient = new QueryClient();
 
@@ -20,13 +23,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/casestudies" element={<CaseStudies />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/casestudies/:slug" element={<CaseStudyPage />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

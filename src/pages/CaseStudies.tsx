@@ -5,96 +5,142 @@ import { ArrowRight } from "lucide-react";
 
 const caseStudies = [
   {
-    id: 1,
-    title: "Digital Transformation for Global Retailer",
-    category: "Strategy & Operations",
-    impact: "47% increase in digital revenue",
-    problem:
-      "A Fortune 100 retail company was struggling to compete with digital-native competitors. Their legacy technology infrastructure and siloed organizational structure were preventing them from delivering seamless customer experiences.",
-    solution:
-      "I led a comprehensive digital transformation initiative that included redesigning their e-commerce platform, implementing a unified customer data strategy, and restructuring teams around customer journeys rather than channels.",
-    tools: [
-      "Customer Journey Mapping",
-      "Agile Transformation",
-      "Change Management",
-      "Data Strategy",
-    ],
-    results: [
-      "47% increase in digital revenue within 18 months",
-      "35% improvement in customer satisfaction scores",
-      "50% reduction in time-to-market for new features",
-      "Successfully integrated online and offline experiences",
-    ],
-  },
+  id: 1,
+  title: "Nutric AI – Personalized Nutrition System",
+  category: "HealthTech",
+  impact: "Automated personalized nutrition at scale",
+  link: "/casestudies/nutric-ai",
+
+  problem:
+    "Healthcare providers lacked a scalable way to deliver truly personalized nutrition plans. Existing solutions failed to combine patient behavior, medical data, and real-world food intake into a unified system.",
+
+  solution:
+    "Built an end-to-end CNN–LSTM pipeline that fuses computer vision, electronic medical records, and behavioral tracking. The system automates bespoke nutrition journeys while keeping clinicians fully in control of patient outcomes.",
+
+  tools: ["Python", "TensorFlow", "Flask", "OpenCV"],
+
+  results: [
+    "Automated personalized nutrition planning for patients",
+    "Integrated vision intelligence with clinical data pipelines",
+    "Improved adherence through behavior-aware recommendations",
+    "Enabled clinician oversight with scalable AI workflows",
+  ],
+},
   {
-    id: 2,
-    title: "Market Expansion Strategy for FinTech Startup",
-    category: "Growth Strategy",
-    impact: "$120M Series C funding secured",
-    problem:
-      "A high-growth fintech company had achieved product-market fit in their initial market but lacked a clear strategy for international expansion. Investors were hesitant to commit to Series C without a compelling growth narrative.",
-    solution:
-      "Developed a comprehensive market expansion strategy that identified priority markets, defined entry approaches, and created a scalable operating model. Worked closely with leadership to articulate the vision to investors.",
-    tools: [
-      "Market Analysis",
-      "Financial Modeling",
-      "Competitive Intelligence",
-      "Investor Communications",
-    ],
-    results: [
-      "Successfully secured $120M Series C funding",
-      "Launched in 3 new markets within 12 months",
-      "300% increase in total addressable market",
-      "Established strategic partnerships in each new market",
-    ],
-  },
-  {
-    id: 3,
-    title: "Operational Turnaround for Manufacturing Company",
-    category: "Operational Excellence",
-    impact: "28% margin improvement",
-    problem:
-      "A mid-sized manufacturing company was experiencing declining margins due to inefficient operations, quality issues, and an outdated production approach. The company needed to modernize while maintaining continuous operations.",
-    solution:
-      "Implemented a phased operational transformation program that included lean manufacturing principles, predictive maintenance systems, and workforce upskilling initiatives.",
-    tools: [
-      "Lean Six Sigma",
-      "Predictive Analytics",
-      "Change Management",
-      "Performance Management",
-    ],
-    results: [
-      "28% improvement in operating margins",
-      "40% reduction in quality defects",
-      "25% increase in production capacity",
-      "Transformed company culture toward continuous improvement",
-    ],
-  },
-  {
-    id: 4,
-    title: "Leadership Team Transformation for Healthcare Organization",
-    category: "Leadership Development",
-    impact: "Employee engagement up 40%",
-    problem:
-      "A regional healthcare system was experiencing high executive turnover, low employee engagement, and inconsistent performance across facilities. The organization needed to build a cohesive leadership team and culture.",
-    solution:
-      "Designed and facilitated a comprehensive leadership development program that included executive coaching, team effectiveness workshops, and a new performance management framework aligned with organizational values.",
-    tools: [
-      "360 Assessments",
-      "Executive Coaching",
-      "Team Building",
-      "Culture Transformation",
-    ],
-    results: [
-      "40% improvement in employee engagement scores",
-      "85% retention of leadership team over 3 years",
-      "Consistent performance metrics across all facilities",
-      "Recognized as 'Best Place to Work' in healthcare sector",
-    ],
-  },
+  id: 2,
+  title: "Stock Price Prediction Platform",
+  category: "Capital Markets",
+  impact: "Actionable market forecasting for trading desks",
+  link: "/casestudies/stock-price-prediction",
+
+  problem:
+    "Proprietary trading desks required more accurate short-term market predictions. Traditional statistical models struggled to capture non-linear temporal patterns in volatile market data.",
+
+  solution:
+    "Designed LSTM ensemble models with automated feature engineering pipelines. The platform generates forward-looking market signals that support faster, data-driven trading decisions.",
+
+  tools: ["Python", "LSTM", "Keras", "Pandas"],
+
+  results: [
+    "Improved prediction accuracy on volatile market movements",
+    "Delivered actionable signals for proprietary trading desks",
+    "Reduced manual feature engineering effort",
+    "Enabled scalable model experimentation and deployment",
+  ],
+},
+ {
+  id: 3,
+  title: "Parkinson’s Disease Prediction",
+  category: "Healthcare",
+  impact: "Improved diagnostic decision support",
+  link: "/casestudies/parkinsons-disease",
+
+  problem:
+    "Early detection of Parkinson’s disease is challenging using traditional clinical assessments alone. Physicians needed additional diagnostic signals without losing control over medical decisions.",
+
+  solution:
+    "Developed diagnostic support tools using biomedical voice markers and machine learning models to assist clinicians in identifying early-stage Parkinson’s patterns.",
+
+  tools: ["Python", "Scikit-learn", "RandomForest", "Logistic Regression"],
+
+  results: [
+    "Improved diagnostic accuracy using voice biomarkers",
+    "Kept physicians fully in control of final diagnoses",
+    "Enabled non-invasive early-stage screening support",
+    "Enhanced clinical confidence with data-backed insights",
+  ],
+},
+ {
+  id: 4,
+  title: "Financial Advisor Streamlit Suite",
+  category: "WealthTech",
+  impact: "AI copilot for financial advisors",
+  link: "/casestudies/financial-advisor-suite",
+
+  problem:
+    "Financial advisors lacked real-time decision support tools that could surface relevant insights, answer client questions, and proactively assist during market volatility.",
+
+  solution:
+    "Built a Streamlit-based AI copilot delivering proactive market commentary, FAQ retrieval, and personalized nudges tailored to advisor workflows.",
+
+  tools: ["Streamlit", "Python", "NLP", "ML"],
+
+  results: [
+    "Enabled faster advisor decision-making",
+    "Delivered contextual market insights in real time",
+    "Improved advisor-client engagement",
+    "Reduced manual research overhead",
+  ],
+},
+{
+  id: 5,
+  title: "BookStore Web App",
+  category: "E-Commerce",
+  impact: "Scalable MERN-based commerce platform",
+  link: "/casestudies/bookstore-app",
+
+  problem:
+    "Publishers needed a modern digital platform to manage inventory, promotions, and community engagement without relying on fragmented third-party tools.",
+
+  solution:
+    "Shipped a full-stack MERN e-commerce platform enabling inventory management, promotional campaigns, and community-driven features in a unified system.",
+
+  tools: ["MongoDB", "Express", "React", "Node.js"],
+
+  results: [
+    "Centralized publisher operations into a single platform",
+    "Enabled scalable inventory and promotion management",
+    "Improved customer engagement through community features",
+    "Built a flexible foundation for future growth",
+  ],
+},
+{
+  id: 6,
+  title: "AI-Powered Accounting Automation",
+  category: "FinOps",
+  impact: "Automated finance operations with AI",
+  link: "/casestudies/ai-accounting",
+
+  problem:
+    "Finance teams managing multi-entity ledgers struggled with manual transaction categorisation, anomaly detection, and limited forecasting capabilities.",
+
+  solution:
+    "Implemented AI-driven accounting automation to categorize transactions, detect anomalies, and deliver predictive financial insights across complex ledger structures.",
+
+  tools: ["Python", "XGBoost", "TensorFlow", "Power BI"],
+
+  results: [
+    "Automated transaction categorisation at scale",
+    "Detected financial anomalies proactively",
+    "Improved forecasting accuracy for finance teams",
+    "Reduced manual effort across multi-entity ledgers",
+  ],
+}
 ];
 
+
 const CaseStudies = () => {
+
   return (
     <Layout>
       {/* Hero */}
@@ -126,17 +172,32 @@ const CaseStudies = () => {
                 className="border-gold-gradient rounded-lg p-8 lg:p-12"
               >
                 {/* Header */}
-                <div className="mb-10">
-                  <p className="text-primary text-sm font-body tracking-wider uppercase mb-3">
-                    {study.category}
-                  </p>
-                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-4">
-                    {study.title}
-                  </h2>
-                  <p className="inline-block px-4 py-2 bg-primary/10 text-primary font-body text-sm rounded">
-                    {study.impact}
-                  </p>
-                </div>
+                <div className="mb-10 flex items-start justify-between gap-6">
+  <div>
+    <p className="text-primary text-sm font-body tracking-wider uppercase mb-3">
+      {study.category}
+    </p>
+
+    <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-4">
+      {study.title}
+    </h2>
+
+    <p className="inline-block px-4 py-2 bg-primary/10 text-primary font-body text-sm rounded">
+      {study.impact}
+    </p>
+  </div>
+
+  {/* Side Arrow Redirect */}
+  <Link
+    to={study.link}
+    className="group mt-2 text-primary transition-transform duration-300 hover:translate-x-1"
+  >
+    <ArrowRight
+      size={24}
+      className="transition-transform duration-300 group-hover:translate-x-1"
+    />
+  </Link>
+</div>
 
                 {/* Content Grid */}
                 <div className="grid md:grid-cols-2 gap-10">

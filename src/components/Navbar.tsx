@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Case Studies", path: "/case-studies" },
-  { name: "Insights", path: "/insights" },
   { name: "Experience", path: "/experience" },
+  { name: "Services", path: "/services" },
+  { name: "Projects", path: "/projects" },
+  { name: "Case Studies", path: "/casestudies" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -58,7 +58,7 @@ const Navbar = () => {
             to="/"
             className="font-display text-2xl font-light tracking-wider text-foreground hover:text-primary transition-colors duration-300"
           >
-            <span className="text-gold-gradient">Portfolio</span>
+            <span className="text-gold-gradient">Busniess Portfolio</span>
           </Link>
 
           {/* Desktop Navigation */}
