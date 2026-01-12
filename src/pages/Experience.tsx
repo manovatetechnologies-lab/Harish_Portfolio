@@ -12,15 +12,19 @@ const experiences = [
     company: "SoftServe Hub",
     role: "Founder & Director",
     period: "Aug 2022 – Present · 3 yrs 6 mos",
-    location: "Hybrid",
+    location: "Chennai, Tamilnadu, India",
     summary:
-      "Founded and scaled SoftServe Hub into a trusted technology partner delivering AI-powered applications, workflow automation, and data-driven business solutions.",
+      "Founded and scaled SoftServe Hub into a multi-disciplinary technology partner delivering AI-driven products, automation systems, and data-led business solutions for global clients.",
     bullets: [
-      "Built and scaled SoftServe Hub for global clients",
-      "Designed and delivered AI & Data Science solutions improving decision-making",
-      "Developed automation workflows integrating APIs, AI models, and third-party tools",
-      "Led digital transformation initiatives achieving measurable ROI",
-      "Cultivated strong client relationships through effective communication and delivery",
+      "Founded SoftServe Hub and scaled operations across multiple industries and geographies",
+      "Defined company vision, service offerings, and long-term growth strategy",
+      "Led end-to-end delivery of AI, automation, and product engineering engagements",
+      "Designed scalable operating models for engineering, delivery, and client success teams",
+      "Partnered directly with founders, CXOs, and leadership teams on digital transformation",
+      "Oversaw solution architecture, execution quality, and delivery governance",
+      "Built long-term client relationships through outcome-driven engagement models",
+      "Drove measurable ROI through automation, analytics, and workflow optimization",
+      "Established internal standards for execution discipline, accountability, and growth",
     ],
   },
   {
@@ -28,14 +32,19 @@ const experiences = [
     company: "SoftServe Hub",
     role: "Angel Investor & Strategic Partner",
     period: "Sep 2024 – Present · 1 yr 5 mos",
-    location: "Chennai, Tamil Nadu, India · On-site",
+    location: "Chennai, Tamil Nadu, India",
     summary:
-      "Active angel investor and strategic partner supporting AI, SaaS, automation, and digital ventures with both capital and execution expertise.",
+      "Active angel investor and strategic partner supporting early-stage and growth-stage ventures with capital, execution guidance, and operational advisory.",
     bullets: [
-      "Invests in AI, SaaS, automation, and digital-first ventures",
-      "Typical investment range: $3M – $10M",
-      "Provides strategic support in scaling, operations, and execution",
-      "Focuses on long-term partnership-driven growth models",
+      "Invests in AI, SaaS, automation, and digital-first technology ventures",
+      "Provides early-stage and growth capital aligned with long-term value creation",
+      "Advises founders on go-to-market strategy, execution planning, and scale readiness",
+      "Supports leadership teams in building operational and delivery discipline",
+      "Guides product positioning, pricing strategy, and customer acquisition planning",
+      "Helps founders avoid execution bottlenecks during rapid growth phases",
+      "Acts as a long-term strategic partner rather than a passive investor",
+      "Focuses on sustainable growth, governance, and founder-led decision-making",
+      "Strengthens investor-founder alignment through hands-on involvement",
     ],
   },
   {
@@ -45,15 +54,21 @@ const experiences = [
     period: "Nov 2025 – Present",
     location: "Chennai, Tamil Nadu, India · On-site",
     summary:
-      "Leading strategic, operational, and client-facing functions that drive organizational growth and ensure high-quality project delivery across enterprise engagements.",
+      "Leading business operations, delivery oversight, and client strategy functions to ensure consistent execution, strong partnerships, and scalable growth across enterprise engagements.",
     bullets: [
-      "Lead business planning, operational oversight, and client strategy initiatives",
-      "Drive organizational performance and execution efficiency",
-      "Ensure delivery excellence across multi-disciplinary project teams",
-      "Strengthen long-term client relationships through strategic alignment",
+      "Owns business operations, delivery coordination, and client strategy initiatives",
+      "Drives execution excellence across cross-functional and multi-disciplinary teams",
+      "Aligns operational processes with long-term business and client objectives",
+      "Manages key enterprise client relationships and strategic engagements",
+      "Improves delivery efficiency through process optimization and governance",
+      "Supports leadership in planning growth, capacity, and delivery scalability",
+      "Ensures consistent quality, timelines, and accountability across projects",
+      "Acts as a bridge between leadership, delivery teams, and client stakeholders",
+      "Strengthens trust and retention through structured communication and execution",
     ],
   },
 ];
+
 
 /* ================= COMPONENT ================= */
 
@@ -63,16 +78,28 @@ const Experience = () => {
   return (
     <Layout>
       {/* HERO */}
-      <section className="pt-32 pb-20">
+      <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <p className="text-primary text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
               Experience
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light mb-6 heading-glow">
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl heading-glow mb-6">
               Leadership through{" "}
-              <span className="text-gold-gradient">execution & strategy</span>
+              <span className="text-gold-gradient">
+                execution & strategy
+              </span>
             </h1>
+
             <p className="text-muted-foreground text-lg leading-relaxed">
               Building, scaling, and advising technology-driven organizations
               across AI, automation, and digital transformation.
@@ -82,25 +109,27 @@ const Experience = () => {
       </section>
 
       {/* TIMELINE */}
-      <section className="section-spacing">
+      <section className="section-spacing bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-light mb-12">
+            <h2 className="text-2xl md:text-3xl font-display font-light mb-12">
               Professional Journey
             </h2>
 
             <div className="relative">
+              {/* Vertical line */}
               <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
 
               <div className="space-y-14">
                 {orderedExperiences.map((exp) => (
                   <div key={exp.id} className="relative pl-8 md:pl-20">
-                    <div className="absolute left-0 md:left-8 top-3 w-2 h-2 rounded-full bg-primary -translate-x-1/2" />
+                    {/* Dot */}
+                    <div className="absolute left-0 md:left-8 top-6 w-2.5 h-2.5 rounded-full bg-primary -translate-x-1/2 gold-glow-subtle" />
 
                     <div className="card-gold p-6 lg:p-8">
                       <div className="flex flex-col md:flex-row md:justify-between gap-3 mb-4">
                         <div>
-                          <h3 className="font-display text-xl md:text-2xl">
+                          <h3 className="text-xl md:text-2xl font-display">
                             {exp.role}
                           </h3>
                           <p className="text-primary">{exp.company}</p>
@@ -108,6 +137,7 @@ const Experience = () => {
                             {exp.location}
                           </p>
                         </div>
+
                         <p className="text-sm text-muted-foreground whitespace-nowrap">
                           {exp.period}
                         </p>
@@ -137,23 +167,30 @@ const Experience = () => {
         </div>
       </section>
 
-<SkillsSection />
+      {/* SKILLS */}
+      <SkillsSection />
 
       {/* CTA */}
-      <section className="section-spacing">
+      <section className="section-spacing bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl mb-6">
+            <h2 className="text-3xl md:text-4xl heading-glow mb-6">
               Let’s work together
             </h2>
+
             <p className="text-muted-foreground mb-10">
               I bring leadership, execution, and long-term thinking to every
               engagement.
             </p>
-            <Button variant="gold" size="xl" asChild className="group">
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground gold-glow rounded-full"
+            >
               <Link to="/contact" className="flex items-center gap-2">
                 Get in Touch
-                <ArrowRight className="group-hover:translate-x-1 transition" />
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

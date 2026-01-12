@@ -3,73 +3,79 @@ import {
   Compass,
   Cpu,
   Rocket,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 
 const SignatureApproach = () => {
   return (
-    <section className="section-spacing relative">
+    <section className="section-spacing relative bg-transparent">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
 
           {/* SECTION HEADER */}
-          <p className="text-gold/80 text-xs tracking-[0.35em] uppercase mb-4">
-            Signature Approach
-          </p>
+          <div className="max-w-3xl mb-20 fade-in-up">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
+              Signature Approach
+            </p>
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6">
-            Engagement blueprint from idea to impact
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl heading-glow mb-6 font-semibold">
+              Engagement blueprint from idea to impact
+            </h2>
 
-          <p className="text-muted-foreground text-lg max-w-3xl mb-14">
-            Every collaboration follows a repeatable-yet-flexible framework
-            that balances experimentation with enterprise-grade delivery.
-          </p>
+            <p className="text-muted-foreground text-xl leading-relaxed">
+              A structured, execution-focused approach designed to translate
+              strategic intent into measurable business outcomes.
+            </p>
+          </div>
 
           {/* CARDS GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <ApproachCard
-              icon={<Compass className="w-5 h-5 text-gold" />}
+              icon={Compass}
               title="Discover & Diagnose"
-              description="Stakeholder workshops, process shadowing, and data health checks establish the transformation baseline."
               bullets={[
-                "Value roadmap within 2 weeks",
-                "Tech + data landscape mapping",
-                "Success metrics definition",
+                "Clarifying business objectives and stakeholder priorities.",
+                "Assessing current operations, workflows, and constraints.",
+                "Defining success criteria and execution scope early.",
               ]}
             />
 
             <ApproachCard
-              icon={<Cpu className="w-5 h-5 text-gold" />}
-              title="Architect the Intelligence"
-              description="Blueprints covering ML models, automation pipelines, experience design, and infrastructure requirements."
+              icon={Cpu}
+              title="Design the Operating Model"
               bullets={[
-                "Reference architecture & backlog",
-                "Security and compliance guardrails",
-                "Pilot scoping",
+                "Structuring delivery models aligned with growth goals.",
+                "Defining ownership, accountability, and decision paths.",
+                "Establishing governance and execution guardrails.",
               ]}
             />
 
             <ApproachCard
-              icon={<Rocket className="w-5 h-5 text-gold" />}
-              title="Build, Launch & Orchestrate"
-              description="Agile pods deliver production-ready features with observability and feedback loops baked in from day one."
+              icon={Rocket}
+              title="Build & Execute"
               bullets={[
-                "Incremental releases every sprint",
-                "Testing automation & MLOps workflows",
-                "Adoption enablement",
+                "Driving execution through structured delivery cycles.",
+                "Ensuring progress visibility and outcome tracking.",
+                "Adapting plans based on feedback and results.",
               ]}
             />
 
             <ApproachCard
-              icon={<ShieldCheck className="w-5 h-5 text-gold" />}
-              title="Scale & Partner"
-              description="Design operating models, playbooks, and training systems so teams own and evolve the solution sustainably."
+              icon={ShieldCheck}
+              title="Scale & Sustain"
               bullets={[
-                "Runbooks and L3 support",
-                "Continuous improvement roadmap",
-                "Executive reporting cadence",
+                "Strengthening operational resilience and continuity.",
+                "Embedding processes for long-term scalability.",
+                "Supporting leadership with clear performance reporting.",
               ]}
             />
 
@@ -85,53 +91,43 @@ export default SignatureApproach;
 /* ------------------------------------------------------------------ */
 
 type ApproachCardProps = {
-  icon: React.ReactNode;
+  icon: React.ElementType;
   title: string;
-  description: string;
   bullets: string[];
 };
 
 const ApproachCard = ({
-  icon,
+  icon: Icon,
   title,
-  description,
   bullets,
 }: ApproachCardProps) => {
   return (
     <div
       className="
+        card-gold
+        p-10
         rounded-3xl
-        border border-gold/15
-        bg-black/40
-        backdrop-blur
-        p-8
-        transition-all duration-300
-        hover:border-gold/30
+        transition-all duration-300 ease-out
+        hover:-translate-y-1
+        hover:gold-glow-subtle
       "
     >
-      {/* CARD HEADER */}
-      <div className="flex items-center gap-4 mb-4">
-        <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
-          {icon}
-        </div>
-        <h3 className="text-xl font-semibold text-foreground">
+      {/* HEADER */}
+      <div className="flex items-center gap-4 mb-8">
+        <Icon className="w-6 h-6 text-foreground" />
+        <h3 className="text-2xl font-medium text-primary">
           {title}
         </h3>
       </div>
 
-      {/* DESCRIPTION */}
-      <p className="text-muted-foreground mb-6 leading-relaxed">
-        {description}
-      </p>
-
       {/* BULLETS */}
-      <ul className="space-y-2">
+      <ul className="space-y-4">
         {bullets.map((item, index) => (
           <li
             key={index}
-            className="flex items-start gap-2 text-muted-foreground"
+            className="flex items-start gap-4 text-muted-foreground text-lg leading-relaxed"
           >
-            <span className="text-gold mt-1">•</span>
+            <span className="mt-2 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <span>{item}</span>
           </li>
         ))}

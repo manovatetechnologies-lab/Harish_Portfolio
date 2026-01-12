@@ -2,23 +2,33 @@ import React from "react";
 
 const SkillsSection = () => {
   return (
-    <section className="section-spacing relative">
+    <section className="section-spacing relative bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
 
           {/* SECTION HEADER */}
-          <p className="text-gold/80 text-xs tracking-[0.35em] uppercase mb-4">
-            Skills
-          </p>
+          <div className="max-w-3xl mb-16 fade-in-up">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
+              Skills
+            </p>
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 max-w-3xl">
-            Core capabilities across AI, engineering, and strategy
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl heading-glow mb-6">
+              Core capabilities across AI, engineering, and strategy
+            </h2>
 
-          <p className="text-muted-foreground text-lg max-w-3xl mb-14">
-            Every engagement blends deep technical mastery with business-first
-            thinking and collaborative leadership.
-          </p>
+            <p className="text-muted-foreground text-lg">
+              Every engagement blends deep technical mastery with business-first
+              thinking and collaborative leadership.
+            </p>
+          </div>
 
           {/* SKILLS GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -122,16 +132,15 @@ const SkillCard = ({ title, skills }: SkillCardProps) => {
   return (
     <div
       className="
-        rounded-3xl
-        border border-white/10
-        bg-black/40
-        backdrop-blur
+        card-gold
         p-8
-        transition-all duration-300
-        hover:border-gold/30
+        rounded-3xl
+        transition-all duration-300 ease-out
+        hover:-translate-y-1
+        hover:gold-glow-subtle
       "
     >
-      <h3 className="text-xl font-semibold text-foreground mb-6">
+      <h3 className="text-xl font-medium text-primary mb-6">
         {title}
       </h3>
 
@@ -142,11 +151,11 @@ const SkillCard = ({ title, skills }: SkillCardProps) => {
             className="
               px-4 py-1.5
               rounded-full
-              border border-white/15
+              border border-border
+              bg-muted
               text-sm text-muted-foreground
-              bg-black/50
               transition-all duration-300
-              hover:border-gold/40
+              hover:border-primary/40
               hover:text-foreground
             "
           >

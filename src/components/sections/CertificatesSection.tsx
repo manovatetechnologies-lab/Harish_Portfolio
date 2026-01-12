@@ -14,23 +14,33 @@ import {
 
 const RecognitionSection = () => {
   return (
-    <section className="section-spacing relative">
+    <section className="section-spacing relative bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
 
           {/* SECTION HEADER */}
-          <p className="text-gold/80 text-xs tracking-[0.35em] uppercase mb-4">
-            Recognition
-          </p>
+          <div className="max-w-3xl mb-16 fade-in-up">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
+              Recognition
+            </p>
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6">
-            Certifications and industry credentials
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl heading-glow mb-6">
+              Certifications and industry credentials
+            </h2>
 
-          <p className="text-muted-foreground text-lg max-w-3xl mb-14">
-            A curated collection of certifications, internships, and simulations
-            earned while leading intelligent transformation programs.
-          </p>
+            <p className="text-muted-foreground text-lg">
+              A curated collection of certifications, internships, and simulations
+              earned while leading intelligent transformation programs.
+            </p>
+          </div>
 
           {/* GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -179,25 +189,24 @@ const RecognitionCard = ({
   return (
     <div
       className="
-        rounded-3xl
-        border border-white/10
-        bg-black/40
-        backdrop-blur
+        card-gold
         p-7
-        transition-all duration-300
-        hover:border-gold/30
+        rounded-3xl
+        transition-all duration-300 ease-out
+        hover:-translate-y-1
+        hover:gold-glow-subtle
       "
     >
       {/* META */}
-      <div className="flex items-center gap-3 text-gold/80 text-xs tracking-[0.25em] uppercase mb-4">
-        <span className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+      <div className="flex items-center gap-3 text-primary text-xs tracking-[0.25em] uppercase mb-4">
+        <span className="w-9 h-9 rounded-full bg-accent/80 flex items-center justify-center gold-glow-subtle">
           {icon}
         </span>
         {meta}
       </div>
 
       {/* TITLE */}
-      <h3 className="text-lg font-semibold text-foreground mb-3 leading-snug">
+      <h3 className="text-lg font-medium text-foreground mb-3 leading-snug">
         {title}
       </h3>
 
@@ -207,18 +216,14 @@ const RecognitionCard = ({
       </p>
 
       {/* LINK */}
-<a
-  href="https://www.linkedin.com/in/harish-nandakumar"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 text-sm text-gold hover:underline group"
->
-  View on LinkedIn
-  <span className="text-gold transition-transform group-hover:translate-x-0.5">
-    ↗
-  </span>
-</a>
-
+      <a
+        href="https://www.linkedin.com/in/harishnandhakumar/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="link-gold text-sm text-primary"
+      >
+        View on LinkedIn ↗
+      </a>
     </div>
   );
 };

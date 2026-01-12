@@ -7,7 +7,6 @@ const navItems = [
   { name: "About", path: "/about" },
   { name: "Experience", path: "/experience" },
   { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
   { name: "Case Studies", path: "/casestudies" },
   { name: "Contact", path: "/contact" },
 ];
@@ -45,75 +44,78 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="font-display text-2xl font-light tracking-wider text-foreground hover:text-primary transition-colors duration-300"
-          >
-            <span className="text-gold-gradient">Busniess Portfolio</span>
-          </Link>
+  className="
+    fixed top-0 left-0 right-0 z-50
+    bg-primary
+    border-b border-primary/40
+    overflow-hidden
+  "
+>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => handleNavClick(item)}
-                className={`link-gold text-sm font-body tracking-wide uppercase transition-colors duration-300 ${
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+  {/* Content Overlay */}
+  <div className="relative z-10">
+    <div className="container mx-auto px-6 lg:px-12">
+      <div className="flex items-center justify-between h-14">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="font-display text-2xl font-light tracking-wider text-black font-semibold"
+        >
+          Business Portfolio
+        </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
+        {/* Desktop Navigation */}
+<div className="hidden md:flex items-center space-x-8">
+  {navItems.map((item) => {
+    const isActive = location.pathname === item.path;
 
-      {/* Mobile Navigation */}
-      <div
-        className={`md:hidden absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border transition-all duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+    return (
+      <Link
+        key={item.name}
+        to={item.path}
+        className={`
+          relative
+          text-sm uppercase tracking-wide
+          text-black/80
+          transition-colors duration-300
+          hover:text-black
+
+          after:content-['']
+          after:absolute
+          after:left-0
+          after:-bottom-1
+          after:h-[2px]
+          after:w-0
+          after:bg-black
+          after:transition-all
+          after:duration-300
+          after:ease-out
+          hover:after:w-full
+
+          ${
+            isActive
+              ? "text-black after:w-full"
+              : ""
+          }
+        `}
       >
-        <div className="container mx-auto px-6 py-6 space-y-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              onClick={() => handleNavClick(item)}
-              className={`block text-sm font-body tracking-wide uppercase transition-colors duration-300 ${
-                location.pathname === item.path
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
+        {item.name}
+      </Link>
+    );
+  })}
+</div>
+
+
+        {/* Mobile Toggle */}
+        <button className="md:hidden text-black">
+          <Menu size={24} />
+        </button>
+
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
   );
 };
 

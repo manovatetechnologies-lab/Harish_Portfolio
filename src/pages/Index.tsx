@@ -4,7 +4,6 @@ import ImpactStats from "@/components/sections/StatsSection";
 import InsightsPreview from "@/components/sections/InsightsPreview";
 import ContactCTA from "@/components/sections/ContactCTA";
 import SignatureApproach from "@/components/sections/SignatureApproach";
-import ProjectsSection from "@/components/sections/ProjectSection";
 
 const Index = () => {
   return (
@@ -13,7 +12,6 @@ const Index = () => {
       <ImpactStats />
       <InsightsPreview />
       <SignatureApproach />
-      <ProjectsSection />
       <ContactCTA />
     </Layout>
   );

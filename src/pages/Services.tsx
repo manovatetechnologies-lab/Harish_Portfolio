@@ -93,7 +93,15 @@ const Services = () => {
       <section className="pt-32 pb-20 relative">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4 fade-in">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
               Services
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1 heading-glow">
@@ -140,7 +148,7 @@ const Services = () => {
                           key={feature}
                           className="flex items-start gap-3 text-muted-foreground font-body text-sm"
                         >
-                          <span className="text-primary mt-1">—</span>
+                          <span className="mt-2 w-2 h-2 rotate-45 bg-primary flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -163,7 +171,7 @@ const Services = () => {
             <p className="text-muted-foreground text-lg font-body font-light mb-10">
               Every engagement begins with understanding your unique situation.
             </p>
-            <Button variant="gold" size="xl" asChild className="group">
+            <Button variant="gold" size="xl" asChild className="group rounded-full">
               <Link to="/contact" className="flex items-center gap-2">
                 Schedule a Consultation
                 <ArrowRight

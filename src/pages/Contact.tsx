@@ -47,10 +47,18 @@ const Contact = () => {
       <section className="pt-32 pb-20 relative">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <p className="text-primary text-sm font-body tracking-[0.3em] uppercase mb-4 fade-in">
+            <p className="
+  fade-in
+  text-gold
+  text-xs
+  tracking-[0.35em]
+  uppercase
+  mb-9
+  drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]
+">
               Contact
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1 heading-glow">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 fade-in fade-in-delay-1 heading-glow font-semibold">
               Let's start a{" "}
               <span className="text-gold-gradient">conversation</span>
             </h1>
@@ -69,7 +77,7 @@ const Contact = () => {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16">
             {/* Form */}
             <div>
-              <h2 className="font-display text-2xl md:text-3xl font-light text-foreground mb-8">
+              <h2 className="font-display text-2xl md:text-3xl font-light text-foreground mb-8 font-semibold">
                 Send a message
               </h2>
 
@@ -135,7 +143,7 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="lg:pl-12">
-              <h2 className="font-display text-2xl md:text-3xl font-light text-foreground mb-8">
+              <h2 className="font-display text-2xl md:text-3xl font-light text-foreground mb-8 font-semibold">
                 Get in touch
               </h2>
 
@@ -145,10 +153,10 @@ const Contact = () => {
                   <div>
                     <p className="font-body text-foreground mb-1">Email</p>
                     <a
-                      href="mailto:contact@alexandermitchell.com"
+                      href="mailto:info@softservehub.in"
                       className="text-muted-foreground font-body hover:text-primary transition-colors duration-300"
                     >
-                      contact@alexandermitchell.com
+                      info@softservehub.in
                     </a>
                   </div>
                 </div>
@@ -158,9 +166,9 @@ const Contact = () => {
                   <div>
                     <p className="font-body text-foreground mb-1">Location</p>
                     <p className="text-muted-foreground font-body">
-                      New York, NY
+                      Chennai, Tamilnadu
                       <br />
-                      Available globally
+                      India
                     </p>
                   </div>
                 </div>
